@@ -544,4 +544,13 @@
 # letters = '-'.join(letters)
 # print(letters)
 
-print("the dry like"[4:6])
+# print("the dry like"[4:6])
+
+import random
+colors = ["red", "blue", "green", "white", "d", "n"]
+for x in colors:
+    if len(colors[1]) >= 4:
+     print(random.choice(colors))
+else:
+    print("Why?")
+print(len(colors))
