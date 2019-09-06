@@ -2,10 +2,10 @@
 """Code Playground File for Control Flow Section of the course"""
 
 """Conditional Statements"""
-#First Example - try changing the value of phone_balance
+# First Example - try changing the value of phone_balance
 
 
-#Second Example - try changing the value of number
+# Second Example - try changing the value of number
 
 # number = 145
 # if number % 2 == 0:
@@ -39,8 +39,6 @@
 # message = "Somebody who is {} years old will pay ${} to ride the bus.".format(age, ticket_price)
 # print(message)
 #
-
-
 
 
 # points = 174  # use this input when submitting your answer
@@ -181,7 +179,7 @@
 #     print(f"I'm working on ... {max_steps - step} remaining")
 
 # print the factorial of number
-    # print(product)
+# print(product)
 
 # card_deck = [4, 11, 8, 5, 13, 2, 8, 10]
 # hand = []
@@ -483,20 +481,13 @@
 # name = input("Enter your name: ")
 # print("Hello there, {}!".format(name.title()))
 #
-
 # num = int(input("Enter an integer: "))
 # print("hello" * num)
-
-
 # result = eval(input("Enter an expression: "))
 # print(result)
-
-
 # x = int(input("Enter a number: "))
 # x += 20
 # print(x)
-
-
 # while True:
 #     try:
 #         x = int(input("Enter a number: "))
@@ -504,12 +495,12 @@
 #     except:
 #         print("That\'s not a valid number!")
 #     # finally:
-    #     print("\nAttempted Input\n")
-
+#     print("\nAttempted Input\n")
 # try:
 #     # some code
 # except ValueError:
 #     # some code
+#
 #
 # try:
 #     # some code
@@ -533,7 +524,6 @@
 # except Exception as e:
 #    # some code
 #    print("Exception occurred: {}".format(e))
-
 # truth = "beauty"
 # index = 0
 # letters = []
@@ -543,14 +533,33 @@
 #
 # letters = '-'.join(letters)
 # print(letters)
-
 # print("the dry like"[4:6])
+# import random
+# colors = ["red", "blue", "green", "white", "d", "n"]
+# for x in colors:
+#     if len(colors[1]) >= 4:
+#      print(random.choice(colors))
+# else:
+#     print("Why?")
+# print(len(colors))
 
-import random
-colors = ["red", "blue", "green", "white", "d", "n"]
-for x in colors:
-    if len(colors[1]) >= 4:
-     print(random.choice(colors))
-else:
-    print("Why?")
-print(len(colors))
+
+"""Iterators and Generators"""
+
+
+def my_range(x):
+    # this is a generator function
+    # it produces a stream of numbers from 0 to -1
+    i = 0
+    while i < x:
+        yield i
+        # yield allows to return values one at a time
+        # and start where it left off each time it's called
+        # this keyword is what differentiates a generator from a typical function
+        i += 1
+
+
+for x in my_range(5):
+    # calling this func return an iterator that we can then iterate through
+    # using a for loop we print values from this stream of data
+    print(x)
